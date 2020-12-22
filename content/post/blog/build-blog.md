@@ -2,7 +2,7 @@
 title = "搭建个人blog"
 date = 2020-12-22
 expiryDate = 2999-01-01
-lastmod = 2020-12-22T10:51:33+08:00
+lastmod = 2020-12-22T10:56:07+08:00
 draft = false
 from = "orgmode"
 +++
@@ -147,7 +147,7 @@ ssh-keygen -t rsa -b 4096 -C "$(git config user.email)" -f gh-pages -N ""
 
 main.yml里面的文件内容如下:
 
-```yaml
+```yml
 name: github pages
 
 on:
