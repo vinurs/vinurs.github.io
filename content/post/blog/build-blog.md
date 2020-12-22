@@ -2,7 +2,7 @@
 title = "搭建个人blog"
 date = 2020-12-22
 expiryDate = 2999-01-01
-lastmod = 2020-12-22T11:11:06+08:00
+lastmod = 2020-12-22T11:14:27+08:00
 draft = false
 from = "orgmode"
 +++
