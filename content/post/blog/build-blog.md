@@ -2,7 +2,7 @@
 title = "搭建个人blog"
 date = 2020-12-22
 expiryDate = 2999-01-01
-lastmod = 2020-12-22T11:08:18+08:00
+lastmod = 2020-12-22T11:11:06+08:00
 draft = false
 from = "orgmode"
 +++
@@ -214,13 +214,15 @@ git merge upstream/master
 ### 编译主题 {#编译主题}
 
 如果你更改了 _src_ 目录下的任意文件，你需要重新编译它们。
-,#+BEGIN\_SRC sh
+
+```sh
   cd ./themes/even/
-
-yarn install
-
+  # install dependencies
+  yarn install
+  # build
   yarn build
-\#+END\_SRC
+```
+
 在这一步的时候，最好把主题目录下面的node\_modules以及yarn.lock删除掉，要不然编译很可能会报一些莫名其妙的错误。
 
 
