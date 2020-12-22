@@ -2,7 +2,7 @@
 title = "搭建个人blog"
 date = 2020-12-22
 expiryDate = 2999-01-01
-lastmod = 2020-12-22T10:56:07+08:00
+lastmod = 2020-12-22T11:04:42+08:00
 draft = false
 from = "orgmode"
 +++
@@ -45,7 +45,7 @@ hugo new site blog
 该命令会新建一个blog目录，并且初始化这个目录，站点所有的东西都会在这个目录下面。
 
 
-#### 配置theme {#配置theme}
+#### 选择主题 {#选择主题}
 
 去[hugo thems](https://themes.gohugo.io/)上面挑选一个喜欢的theme，然后安装，我选择的是even，由于考虑到我后面可能会修改这个主题，因此我选择的是fork了这个主题，然后将这个主题clone到themes目录下面
 
@@ -188,52 +188,14 @@ jobs:
 然后将刚才的内容推送到source分支上面去就可以了，我们可以通过 <https://github.com/vinurs/vinurs.github.io/actions> 这个页面来查看这个action执行的结果，一般是没什么问题的，有问题的话就google解决一下就可以，基本不会出现什么问题。
 
 
-## 为什么选择hugo {#为什么选择hugo}
+### 绑定自己的域名 {#绑定自己的域名}
 
-HUGO是一个静态网站生成软件，用GO语言写成，据说是目前最快的静态blog生成软件了。当然了，不仅仅是因为它快，用过Emacs的人都比较喜欢用orgmode来写文档，那么我写blog当然也想用能够支持Emacs orgmode的了，hugo现在已经提供了对Emacs orgmode的native支持，而且原来的hexo的hexo-renderer-orgmode那个插件的作者也不维护了，因此就换到了hugo。
-
-不过后来发现hugo对Emacs orgmode还不能完全支持，不过还好还有[ox-hugo](https://github.com/kaushalmodi/ox-hugo)，可以用来将orgmode转成hugo支持的markdown格式的，很赞。
+github域名设定就是在根目录下面建一个CNAME文件，在hugo里面，我们只需要将原来的CNAME文件存放到static目录下面即可。
 
 
-## 安装、配置hugo {#安装-配置hugo}
+## EVEN配置 {#even配置}
 
-
-### 安装hugo {#安装hugo}
-
-我用的是Macos，安装起来很简单：
-
-```sh
-  brew install hugo
-```
-
-
-### 初始化blog {#初始化blog}
-
-```sh
-  hugo new site website
-```
-
-会新建一个website目录，并且初始化这个目录，站点所有的东西都会在这个目录下面。
-
-
-### 配置theme {#配置theme}
-
-去[hugo thems](https://themes.gohugo.io/)上面挑选一个喜欢的theme，然后安装，我选择的是even：
-
-```sh
-  cd website
-  mkdir themes
-  cd themes
-  git clone https://github.com/olOwOlo/hugo-theme-even.git even
-```
-
-打开website/config.toml设置里面的主题名称：
-
-```text
-  theme = "even"
-```
-
-参考[Even配置](https://github.com/olOwOlo/hugo-theme-even/blob/master/README-zh.md)进行配置。
+参考[Even配置](https://github.com/olOwOlo/hugo-theme-even/blob/master/README-zh.md)进行配置
 
 
 ### merge主题 {#merge主题}
@@ -261,70 +223,6 @@ yarn install
   yarn build
 \#+END\_SRC
 在这一步的时候，最好把主题目录下面的node\_modules以及yarn.lock删除掉，要不然编译很可能会报一些莫名其妙的错误。
-
-
-### 简单使用 {#简单使用}
-
-```sh
-  # 新建文章
-  hugo new post/hello.md
-  # 预览website
-  hugo server -D
-```
-
-
-### hugo site目录结构 {#hugo-site目录结构}
-
-会自动生成这样一个目录结构：
-
-```text
-  [website]
-  |__ [archetypes]
-  | |__ default.md
-  |__ content
-  | |__ post
-  |__ layouts
-  |__ static
-  |__ config.toml
-```
-
-
-#### archetypes {#archetypes}
-
-用来存放新建文章的模板，hugo默认使用的是Markdown格式的，但是我比较喜欢用Emacs orgmode，因此，我们可以在archtypes下面新建default.org模板，以后我们新建的.org的文章就会基于这个模板而生成。
-
-
-#### content {#content}
-
-直接在这个下面新建一个文件就是固定的page，例如"关于我"的页面。
-
-
-#### post {#post}
-
-文章目录，我们新建的文章就会在这个目录下面。
-
-
-#### static {#static}
-
-用来存放website静态的文件，例如图片啊之类的，我在该目录下面新建了imgs目录，blog相关的图片就存放在这个目录下面。
-
-
-#### config.toml {#config-dot-toml}
-
-website的配置文件。
-
-
-## 托管到github {#托管到github}
-
-
-### 推送到github {#推送到github}
-
-运行hugo server会生成一个public目录，我们只要把public目录推送到github.io上面去就可以了。
-
-
-### 绑定自己的域名 {#绑定自己的域名}
-
-github域名设定就是在根目录下面建一个CNAME文件，在hugo里面，我们只需要将原来的CNAME文件存放到static目录下面即可。
 
 
 ## 更新历史 {#更新历史}
