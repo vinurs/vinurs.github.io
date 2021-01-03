@@ -1,0 +1,113 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><title>用orgmode写blog - Even - A super concise theme for Hugo</title><meta name=renderer content="webkit"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta http-equiv=cache-control content="no-transform"><meta http-equiv=cache-control content="no-siteapp"><meta name=theme-color content="#f8f5ec"><meta name=msapplication-navbutton-color content="#f8f5ec"><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-status-bar-style content="#f8f5ec"><meta name=author content="vinurs"><meta name=description content="orgmode号称emacs下面的大杀器，emacs本来就是一个杀手级的应用，配上了orgmode真的是越用越爽。"><meta name=keywords content="Hugo,theme,even"><meta name=generator content="Hugo 0.80.0 with theme even"><link rel=canonical href=http://localhost:1313/post/blog/blog-with-orgmode/><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/manifest.json><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link href=/sass/main.min.c7bc1becf36bcf6a9ebd25d2947e43a2eb745ddb0c9a32b43126fd7fa460c351.css rel=stylesheet><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin=anonymous><meta property="og:title" content="用orgmode写blog"><meta property="og:description" content="orgmode号称emacs下面的大杀器，emacs本来就是一个杀手级的应用，配上了orgmode真的是越用越爽。"><meta property="og:type" content="article"><meta property="og:url" content="http://localhost:1313/post/blog/blog-with-orgmode/"><meta property="article:published_time" content="2020-02-14T00:00:00+00:00"><meta property="article:modified_time" content="2021-01-03T10:11:10+08:00"><meta itemprop=name content="用orgmode写blog"><meta itemprop=description content="orgmode号称emacs下面的大杀器，emacs本来就是一个杀手级的应用，配上了orgmode真的是越用越爽。"><meta itemprop=datePublished content="2020-02-14T00:00:00+00:00"><meta itemprop=dateModified content="2021-01-03T10:11:10+08:00"><meta itemprop=wordCount content="1539"><meta itemprop=keywords content><meta name=twitter:card content="summary"><meta name=twitter:title content="用orgmode写blog"><meta name=twitter:description content="orgmode号称emacs下面的大杀器，emacs本来就是一个杀手级的应用，配上了orgmode真的是越用越爽。"><!--[if lte IE 9]><script src=https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js></script><![endif]--><!--[if lt IE 9]><script src=https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js></script><script src=https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js></script><![endif]--></head><body><div id=mobile-navbar class=mobile-navbar><div class=mobile-header-logo><a href=/ class=logo>Even</a></div><div class=mobile-navbar-icon><span></span><span></span><span></span></div></div><nav id=mobile-menu class="mobile-menu slideout-menu"><ul class=mobile-menu-list><a href=/><li class=mobile-menu-item>Home</li></a><a href=/post/><li class=mobile-menu-item>Archives</li></a><a href=/tags/><li class=mobile-menu-item>Tags</li></a><a href=/categories/><li class=mobile-menu-item>Categories</li></a></ul></nav><div class=container id=mobile-panel><header id=header class=header><div class=logo-wrapper><a href=/ class=logo>Even</a></div><nav class=site-navbar><ul id=menu class=menu><li class=menu-item><a class=menu-item-link href=/>Home</a></li><li class=menu-item><a class=menu-item-link href=/post/>Archives</a></li><li class=menu-item><a class=menu-item-link href=/tags/>Tags</a></li><li class=menu-item><a class=menu-item-link href=/categories/>Categories</a></li></ul></nav></header><main id=main class=main><div class=content-wrapper><div id=content class=content><article class=post><header class=post-header><h1 class=post-title>用orgmode写blog</h1><div class=post-meta><span class=post-time>2020-02-14</span></div></header><div class=post-toc id=post-toc><h2 class=post-toc-title>Contents</h2><div class="post-toc-content always-active"><nav id=TableOfContents><ul><li><ul><li><a href=#新建文章>新建文章</a><ul><li><a href=#模板自动化>模板自动化</a></li><li><a href=#通过yasnippet来进行补全>通过yasnippet来进行补全</a></li></ul></li><li><a href=#发布文章>发布文章</a></li><li><a href=#图片管理>图片管理</a></li><li><a href=#重新生成md文件>重新生成md文件</a></li><li><a href=#更新历史>更新历史</a></li></ul></li></ul></nav></div></div><div class=post-content><p>orgmode号称emacs下面的大杀器，emacs本来就是一个杀手级的应用，配上了orgmode真的是越用越爽。</p><h2 id=新建文章>新建文章</h2><p>因为hugo目前渲染得比较好的还是md文件，因此我们通过ox-hugo来将org文件转成md文件，而且ox-hugo还能自动将文章导成md</p><p>目前组织文章的方式有两种:</p><ul><li>一个文件就是一篇文章</li><li>一系列的文章放在一个文件里面，每一个一级标题就是一个文章</li></ul><p>第一种其实就是第二种的一个特例，因此我选用了第二种来管理我的文章。</p><p>我建立了一个模板:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-org data-lang=org><span class=c># -*- mode: org; -*-</span>
+<span class=cs>#+HUGO_BASE_DIR</span><span class=c>: ~/sys-cfg/github/vinurs.github.io/</span>
+<span class=cs>#+HUGO_SECTION</span><span class=c>: ../content/post/example</span>
+
+
+<span class=gh>*</span><span class=gs> 新的文章</span>
+<span class=c>  :PROPERTIES:
+</span><span class=c></span><span class=cs>  :EXPORT_TITLE: 文章标题
+</span><span class=cs>  :EXPORT_DESCRIPTION: 这个是用来写blog的示例
+</span><span class=cs>  :EXPORT_AUTHOR: vinurs
+</span><span class=cs>  :EXPORT_EMAIL: &lt;haiyuan.vinurs@gmail.com&gt;
+</span><span class=cs>  :EXPORT_DATE: 2020-02-14
+</span><span class=cs>  :EXPORT_STARTUP: content
+</span><span class=cs>  :EXPORT_HUGO_CATEGORIES:
+</span><span class=cs>  :EXPORT_HUGO_TAGS:
+</span><span class=cs>  :EXPORT_HUGO_DRAFT: true
+</span><span class=cs>  :EXPORT_FILE_NAME: example
+</span><span class=cs>  :EXPORT_HUGO_AUTO_SET_LASTMOD: t
+</span><span class=cs>  :EXPORT_HUGO_EXPIRYDATE: 2999-01-01
+</span><span class=cs>  :EXPORT_HUGO_FRONT_MATTER_KEY_REPLACE: description&gt;summary
+</span><span class=cs>  :EXPORT_HUGO_CUSTOM_FRONT_MATTER:
+</span><span class=cs></span><span class=c>  :END:</span>
+
+  这里是概要部分
+
+  #+hugo: more
+
+
+  正文内容部分
+  This getsll created iln <span class=nc>~&lt;HUGO_BASE_DIR&gt;/content/articles/~</span>. As the <span class=nc>~EXPORT_HUGO_SECTION~</span> property is not set, the <span class=nc>~#+hugo_section~</span>
+  keyword value applies.
+  laa11
+
+  ** 更新历史 <span class=gd>+ 2019-12-18
+</span><span class=gd>    +</span> 初稿
+</code></pre></td></tr></table></div></div><p>每次只要copy这个文件然后进行修改里面的内容就可以了:</p><ul><li><code>HUGO_BASE_DIR</code> ox-hugo导出的md文件的基目录</li><li><code>HUGO_SECTION</code> ox-hugo导出的文章相对与HUO_BASE_DIR的目录</li><li><code>:EXPORT_DATE:</code> 文章发布的日期</li><li><code>:EXPORT_FILE_NAME:</code> 导出的文件名称</li><li><code>#+HUGO_SECTION:</code> 导出的文件的目录</li><li><code>更新历史</code></li></ul><h3 id=模板自动化>模板自动化</h3><p>hugo有个archetypes功能，因此为了避免每次不必要的复制，我在 <code>archetypes</code> 下面新建了一个 <code>default.org</code> ，这样每次就可以自动化完成一些需要手动修改的内容。</p><p>例如每次我只需要执行 <code>hugo new test.org</code> 就可以了，接着把这个文件移动到对应的目录下面，然后再修改对应的内容就可以了:</p><ul><li><code>:EXPORT_FILE_NAME:</code> 导出的文件名称</li><li><code>:EXPORT_TITLE:</code> 文章的标题</li><li><code>:EXPORT_DESCRIPTION</code> 描述</li><li><code>#+HUGO_SECTION:</code> 导出的文件的目录</li><li><code>更新历史</code></li></ul><h3 id=通过yasnippet来进行补全>通过yasnippet来进行补全</h3><p>yasnippet是emacs里面的补全神器，我用的是doom-emacs的配置，因此在 <code>~/.doom.d/snippets/org-mode</code> 里面新增了一个 <code>__org-directory-template.org</code> 文件</p><h2 id=发布文章>发布文章</h2><p>每次我新建文章的时候，里面的 <code>:EXPORT_HUGO_DRAFT:</code> 的部分都是设置成了 <code>false</code> ，因此如果想发布文章，那么把这里改成 <code>true</code> 。</p><p>此外，我的文章是单独管理的，org文件没有放在github.io的仓库下面，因此每次我是保存到仓库目录下面，有些是我的draft文件，所以我不想把这些draft文件发布出去，因此我在仓库下面写了一个脚本每次只提交不是draft的文件。</p><h2 id=图片管理>图片管理</h2><p>用orgmode来写文章最大的一个问题就是如何来管理图片，如何方便地插入图片。</p><p>我们写blog的时候大部分的操作是这样的:</p><ul><li>截图插入</li><li>从网络上copy一个图片插入</li><li>从本地目录选择一张图片插入</li></ul><p>无论怎么操作，最后我们都希望每一个文章相关的图片都在这个文章相应的目录里面，这样便于以后进行管理。</p><p>另外，我的写文章的目录跟最后发布的目录不在同一个地方，最后用ox-hugo生成对应的md文件的时候我希望对应的图片也要能copy过去。</p><p>好在在orgmode里面有个<a href=https://github.com/abo-abo/org-download>org-download</a>的插件可以做到这一点:</p><ul><li>网络上的图片可以使用: org-download-yank</li><li>本地的图片直接拖拽就可以</li><li>需要截屏的时候使用: org-download-screenshot</li></ul><p>不过我现在一般做法都是先把图片准备好了然后保存到本地，然后直接拖拽到orgmode的buffer里面来。</p><h2 id=重新生成md文件>重新生成md文件</h2><p>目前我是通过ox-hugo来自动将org文件转成md文件，有时候我们将所有的文件重新生成一遍，这时候不需要重新一篇篇文章打开然后导出，ox-hugo里面提供了类似的方法。</p><p>将ox-hugo clone下来，然后修改里面的Makefile文件就可以了:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-sh data-lang=sh>git clone --recurse-submodules -j8 https://github.com/kaushalmodi/ox-hugo
+</code></pre></td></tr></table></div></div><p>修改的内容如下:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-diff data-lang=diff><span class=gh>diff --git a/Makefile b/Makefile
+</span><span class=gh>index fc36596..0c4903e 100644
+</span><span class=gh></span><span class=gd>--- a/Makefile
+</span><span class=gd></span><span class=gi>+++ b/Makefile
+</span><span class=gi></span><span class=gu>@@ -70,10 +70,10 @@ TEST_ENABLED=0
+</span><span class=gu></span>OX_HUGO_TEST_DIR=$(shell pwd)/test
+
+# Base directory for the Hugo example site
+<span class=gd>-OX_HUGO_TEST_SITE_DIR=$(OX_HUGO_TEST_DIR)/site
+</span><span class=gd></span><span class=gi>+OX_HUGO_TEST_SITE_DIR=~/system-configuration/github/vinurs.github.io
+</span><span class=gi></span>
+# Directory containing Org files for the test site
+<span class=gd>-OX_HUGO_TEST_ORG_DIR=$(OX_HUGO_TEST_SITE_DIR)/content-org
+</span><span class=gd></span><span class=gi>+OX_HUGO_TEST_ORG_DIR=~/system-configuration/pdms
+</span></code></pre></td></tr></table></div></div><p>OX_HUGO_TEST_SITE_DIR就是我们的github.io的目录，OX_HUGO_TEST_ORG_DIR是我们存放org文件的目录，然后进入ox-hugo目录，执行make md就可以重新生成。</p><h2 id=更新历史>更新历史</h2><ul><li><p>2020-04-25</p><ul><li>增加了如何一次性将org文件导出成md</li></ul></li><li><p>2020-04-19</p><ul><li>增加了如何用orgmode来管理图片</li></ul></li><li><p>2020-02-14</p><ul><li>初稿</li></ul></li></ul></div><div class=post-copyright><p class=copyright-item><span class=item-title>Author</span>
+<span class=item-content>vinurs</span></p><p class=copyright-item><span class=item-title>LastMod</span>
+<span class=item-content>2021-01-03</span></p></div><footer class=post-footer><nav class=post-nav><a class=prev href=/post/blog/build-blog/><i class="iconfont icon-left"></i><span class="prev-text nav-default">搭建个人blog</span>
+<span class="prev-text nav-mobile">Prev</span></a>
+<a class=next href=/post/hidden-post/><span class="next-text nav-default">This is a hidden post.</span>
+<span class="next-text nav-mobile">Next</span>
+<i class="iconfont icon-right"></i></a></nav></footer></article></div></div></main><footer id=footer class=footer><div class=social-links><a href=mailto:your@email.com class="iconfont icon-email" title=email></a><a href=http://localhost:1313 class="iconfont icon-stack-overflow" title=stack-overflow></a><a href=http://localhost:1313 class="iconfont icon-twitter" title=twitter></a><a href=http://localhost:1313 class="iconfont icon-facebook" title=facebook></a><a href=http://localhost:1313 class="iconfont icon-linkedin" title=linkedin></a><a href=http://localhost:1313 class="iconfont icon-google" title=google></a><a href=http://localhost:1313 class="iconfont icon-github" title=github></a><a href=http://localhost:1313 class="iconfont icon-weibo" title=weibo></a><a href=http://localhost:1313 class="iconfont icon-zhihu" title=zhihu></a><a href=http://localhost:1313 class="iconfont icon-douban" title=douban></a><a href=http://localhost:1313 class="iconfont icon-pocket" title=pocket></a><a href=http://localhost:1313 class="iconfont icon-tumblr" title=tumblr></a><a href=http://localhost:1313 class="iconfont icon-instagram" title=instagram></a><a href=http://localhost:1313 class="iconfont icon-gitlab" title=gitlab></a><a href=http://localhost:1313 class="iconfont icon-bilibili" title=bilibili></a><a href=http://localhost:1313/index.xml type=application/rss+xml class="iconfont icon-rss" title=rss></a></div><div class=copyright><span class=power-by>Powered by <a class=hexo-link href=https://gohugo.io>Hugo</a></span>
+<span class=division>|</span>
+<span class=theme-info>Theme -
+<a class=theme-link href=https://github.com/olOwOlo/hugo-theme-even>Even</a></span>
+<span class=copyright-year>&copy;
+2017 -
+2021<span class=heart><i class="iconfont icon-heart"></i></span><span>olOwOlo</span></span></div></footer><div class=back-to-top id=back-to-top><i class="iconfont icon-up"></i></div></div><script src=https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=anonymous></script><script src=https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin=anonymous></script><script src=https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin=anonymous></script><script type=text/javascript src=/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js></script></body></html>
