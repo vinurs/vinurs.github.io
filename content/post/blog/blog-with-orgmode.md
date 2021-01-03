@@ -3,7 +3,7 @@ title = "用orgmode写blog"
 author = ["vinurs"]
 date = 2020-02-14
 expiryDate = 2999-01-01
-lastmod = 2021-01-03T10:11:10+08:00
+lastmod = 2021-01-03T11:09:06+08:00
 draft = false
 from = "orgmode"
 +++
@@ -91,7 +91,21 @@ hugo有个archetypes功能，因此为了避免每次不必要的复制，我在
 
 ### 通过yasnippet来进行补全 {#通过yasnippet来进行补全}
 
-yasnippet是emacs里面的补全神器，我用的是doom-emacs的配置，因此在 `~/.doom.d/snippets/org-mode` 里面新增了一个 `__org-directory-template.org` 文件
+yasnippet是emacs里面的补全神器，我用的是doom-emacs的配置，因此在 `~/.doom.d/snippets/org-mode` 里面新增了一个 `__org-directory-template.org` 文件，内容如下:
+
+```org-mode
+ * a
+```
+
+增加下面的配置函数，这个自动补全只对我用来记笔记的org文件才自动补全
+
+```emacs-lisp
+;; 在org-directory下面的文件使用的org文件不一样
+(set-file-template! "\\.org$"
+  :when '+org-file-in-org-directory-p
+  ;; :when +file-templates-in-emacs-dirs-p
+  :trigger "__org-directory-template.org" :mode 'org-mode)
+```
 
 
 ## 发布文章 {#发布文章}
