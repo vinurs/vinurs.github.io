@@ -3,7 +3,7 @@ title = "用orgmode写blog"
 author = ["vinurs"]
 date = 2020-02-14
 expiryDate = 2999-01-01
-lastmod = 2021-01-03T11:20:44+08:00
+lastmod = 2100-12-21T00:00:00+00:00
 draft = false
 from = "orgmode"
 +++
@@ -94,7 +94,7 @@ hugo有个archetypes功能，因此为了避免每次不必要的复制，我在
 yasnippet是emacs里面的补全神器，我用的是doom-emacs的配置，因此在 `~/.doom.d/snippets/org-mode` 里面新增了一个 `__org-directory-template.org` 文件，内容如下:
 
 ```org-mode
- * a
+* a
 ```
 
 增加下面的配置函数，这个自动补全只对我用来记笔记的org文件才自动补全
@@ -143,7 +143,7 @@ OX_HUGO_TEST_DIR=$(shell pwd)/test
 # Directory containing Org files for the test site
 -OX_HUGO_TEST_ORG_DIR=$(OX_HUGO_TEST_SITE_DIR)/content-org
 +# OX_HUGO_TEST_ORG_DIR=$(OX_HUGO_TEST_SITE_DIR)/content-org
-+OX_HUGO_TEST_ORG_DIR=~/sys-cfg/pdms
++OX_HUGO_TEST_ORG_DIR=~/sys-cfg/github/pkms
 # https://stackoverflow.com/a/3774731/1219634
 # Note that the use of immediate assignment := rather than recursive
 # assignment = is important here: you do not want to be running the
@@ -165,7 +165,7 @@ index d58f2db..cc57e42 100644
 ;; Allow multiple line Org emphasis markup
 ;; http://emacs.stackexchange.com/a/13828/115
 +
-+  (setq org-directory "~/sys-cfg/pdms/")
++  (setq org-directory "~/sys-cfg/github/pkms/")
 +  (setq org-attach-id-dir (expand-file-name ".attach/" org-directory))
 (setcar (nthcdr 4 org-emphasis-regexp-components) 20) ;Up to 20 lines, default is just 1
 ;; Below is needed to apply the modified `org-emphasis-regexp-components'

@@ -3,7 +3,7 @@ title = "搭建个人blog"
 author = ["vinurs"]
 date = 2020-01-22
 expiryDate = 2999-01-01
-lastmod = 2021-01-03T10:13:27+08:00
+lastmod = 2100-12-21T00:00:00+00:00
 draft = false
 from = "orgmode"
 +++
