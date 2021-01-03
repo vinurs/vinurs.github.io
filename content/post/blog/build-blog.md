@@ -3,7 +3,7 @@ title = "搭建个人blog"
 author = ["vinurs"]
 date = 2020-12-22
 expiryDate = 2999-01-01
-lastmod = 2021-01-02T19:47:11+08:00
+lastmod = 2021-01-03T10:07:03+08:00
 draft = false
 from = "orgmode"
 +++
@@ -72,7 +72,7 @@ hugo server
 
 这样本地可以通过 <http://localhost:1313/> 这个来进行访问了，这样一个blog的雏形就搭建好了。
 
-执行 `hugo` 以后会在blog/public下面生成可以发布的站点，后面我们只要把 `public` 下面的内容放到github上面去就可以了。
+执行 `hugo` 以后会在blog/public下面生成可以发布的站点，后面我们只要把 `public` 下面的内容放到我们自己的github.io上面去就可以了。
 
 
 ## GITHUB PAGE {#github-page}
@@ -82,7 +82,7 @@ hugo server
 
 ### 发布 {#发布}
 
-在github上面新建一个 `用户.github.io` 的仓库，clone到本地，然后将我们上面的 `public` 里面的内容copy到这个仓库下面就可以了，最后再push到远程仓库。
+在github上面新建一个 `用户名.github.io` 的仓库，clone到本地，然后将我们上面的 `public` 里面的内容copy到这个仓库下面就可以了，最后再push到远程仓库。
 
 ```shell
 git clone https://github.com/vinurs/vinurs.github.io.git
@@ -106,6 +106,7 @@ github page读取的是github.io的master分支，因此我们建立了一个sou
 
 ```shell
 git clone --branch=source https://github.com/vinurs/vinurs.github.io.git
+rm -rf vinurs.github.io/*
 cp -rf blog/* vinurs.github.io
 ```
 
@@ -116,7 +117,7 @@ cd vinurs.github.io
 git submodule add  https://github.com/vinurs/hugo-theme-even.git themes/even
 ```
 
-public、resources里面的内容不需要提交，这个是每次自动生成的，我们增加了.gitignore文件。
+public、resources里面的内容不需要提交，这个是每次自动生成的，因此我们增加了.gitignore文件。
 
 
 #### ACTIONS\_DEPLOY\_KEY {#actions-deploy-key}
@@ -142,8 +143,8 @@ ssh-keygen -t rsa -b 4096 -C "$(git config user.email)" -f gh-pages -N ""
 在项目的根目录下面新建对应的目录以及文件:
 
 ```sh
-  mkdir -p .github/workflows/
-  touch .github/workflows/main.yml
+mkdir -p .github/workflows/
+touch .github/workflows/main.yml
 ```
 
 main.yml里面的文件内容如下:
@@ -217,11 +218,11 @@ git merge upstream/master
 如果你更改了 _src_ 目录下的任意文件，你需要重新编译它们。
 
 ```sh
-  cd ./themes/even/
-  # install dependencies
-  yarn install
-  # build
-  yarn build
+cd ./themes/even/
+# install dependencies
+yarn install
+# build
+yarn build
 ```
 
 在这一步的时候，最好把主题目录下面的node\_modules以及yarn.lock删除掉，要不然编译很可能会报一些莫名其妙的错误。
