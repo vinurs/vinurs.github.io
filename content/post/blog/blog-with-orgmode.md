@@ -91,11 +91,7 @@ hugo有个archetypes功能，因此为了避免每次不必要的复制，我在
 
 ### 通过yasnippet来进行补全 {#通过yasnippet来进行补全}
 
-yasnippet是emacs里面的补全神器，我用的是doom-emacs的配置，因此在 `~/.doom.d/snippets/org-mode` 里面新增了一个 `__org-directory-template.org` 文件，内容如下:
-
-```org-mode
-* a
-```
+yasnippet是emacs里面的补全神器，我用的是doom-emacs的配置，因此在 `~/.doom.d/snippets/org-mode` 里面新增了一个 `__org-directory-template.org` 文件
 
 增加下面的配置函数，这个自动补全只对我用来记笔记的org文件才自动补全
 
