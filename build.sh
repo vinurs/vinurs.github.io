@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+export ALL_PROXY=socks5://127.0.0.1:7891
+
 rm -rf content/*
 cd ox-hugo; make md; cd -
 git add .
