@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Emacs on 知行合一</title><link>https://vinurs.me/tags/emacs/</link><description>Recent content in Emacs on 知行合一</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 04 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://vinurs.me/tags/emacs/index.xml" rel="self" type="application/rss+xml"/><item><title>利其器─Emacs/orgmode插入图片</title><link>https://vinurs.me/post/devs/orgmode%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</link><pubDate>Sun, 04 Oct 2020 00:00:00 +0000</pubDate><guid>https://vinurs.me/post/devs/orgmode%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</guid><description>&lt;p>用orgmode来记笔记免不了要插入图片，在用其它的编辑器的时候想插入图片一般都有下面机种途径：&lt;/p>
+&lt;ul>
+&lt;li>截图粘贴&lt;/li>
+&lt;li>复制网址&lt;/li>
+&lt;li>复制图片&lt;/li>
+&lt;li>通过系统文件夹来进行选择&lt;/li>
+&lt;li>直接拖拽&lt;/li>
+&lt;/ul>
+&lt;p>那么在orgmode里面我们是不是也能很方便地进行图片的插入呢？&lt;/p></description></item></channel></rss>
