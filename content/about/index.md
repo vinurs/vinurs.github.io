@@ -3,7 +3,7 @@ title = "颜色不一样的烟火"
 author = ["vinurs"]
 date = 2019-09-25
 expiryDate = 2999-01-01
-lastmod = 2021-01-14T05:24:28+08:00
+lastmod = 2021-01-14T05:27:20+08:00
 draft = false
 from = "orgmode"
 +++
@@ -43,6 +43,6 @@ vinurs是我的英文名，只是不愿意与太多的jack、tom同名，于是�
 <div align="center">
   <div></div>
 
-<img src="/ox-hugo/_20210114_044519vinurs-personal-weixin.png" alt="_20210114_044519vinurs-personal-weixin.png" width="40%" align="center" /><img src="/ox-hugo/_20210114_044536vinurs-weixin-subscription.jpg" alt="_20210114_044536vinurs-weixin-subscription.jpg" width="40%" align="center" />
+<img src="/ox-hugo/_20210114_044519vinurs-personal-weixin.png" alt="_20210114_044519vinurs-personal-weixin.png" width="35%" align="center" /><img src="/ox-hugo/_20210114_044536vinurs-weixin-subscription.jpg" alt="_20210114_044536vinurs-weixin-subscription.jpg" width="35%" align="center" />
 
 </div>
