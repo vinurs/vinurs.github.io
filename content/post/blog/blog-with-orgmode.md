@@ -3,7 +3,7 @@ title = "用orgmode写blog"
 author = ["vinurs"]
 date = 2020-02-14
 expiryDate = 2999-01-01
-lastmod = 2100-12-21T00:00:00+00:00
+lastmod = 2021-01-14T04:59:06+08:00
 draft = false
 from = "orgmode"
 +++
@@ -168,7 +168,7 @@ index d58f2db..cc57e42 100644
 ;; settings from above.
 ```
 
-OX\_HUGO\_TEST\_SITE\_DIR就是我们的github.io的目录，OX\_HUGO\_TEST\_ORG\_DIR是我们存放org文件的目录，然后进入ox-hugo目录，执行make md就可以重新生成。
+OX\_HUGO\_TEST\_SITE\_DIR就是我们的github.io的目录，OX\_HUGO\_TEST\_ORG\_DIR是我们存放org文件的目录，然后进入ox-hugo目录，执行 `make md` 就可以重新生成。
 
 
 ## 更新历史 {#更新历史}
