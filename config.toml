@@ -65,7 +65,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   gitRepo = "https://github.com/vinurs/vinurs.github.io.git"
 
   # site info (optional)                                  # 站点信息（可选，不需要的可以直接注释掉）
-  logoTitle = "天使恶魔在世间"        # default: the title value    # 默认值: 上面设置的title值
+  logoTitle = "知行合一"        # default: the title value    # 默认值: 上面设置的title值
   keywords = ["Hugo", "theme","even"]
   description = "我是佛，也是魔；我不是坏人，但也不是好人。善恶无定准，义理无定在，唯良知在我心。"
 
