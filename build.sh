@@ -3,6 +3,7 @@
 export ALL_PROXY=socks5://127.0.0.1:7891
 
 rm -rf content/*
+rm -rf static/ox-hugo
 cd ox-hugo; make md; cd -
 # 删除draft
 cd content
