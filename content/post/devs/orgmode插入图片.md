@@ -27,18 +27,20 @@ from = "orgmode"
 
 在doom里面，通过 `org-download-screenshot` 就可以进行截图，然后就会自动copy到当前位置。当然了，这个功能其实是[org-download](https://github.com/abo-abo/org-download)提供的。
 
-{{< figure src="/ox-hugo/_20210103_122145screenshot.png" width="80%" >}}
+{{< figure src="/ox-hugo/_20210103_122145screenshot.png" width="100%" >}}
 
 截好的图片会自动存放在 `.attach` 目录下面。
+
+**注意** 不过我一般不用这里的截图方式，我用别的截图方式以后copy到剪切板，然后用下面的[复制网址/复制图片](#复制网址-复制图片)来进行粘贴
 
 
 ## 复制网址/复制图片 {#复制网址-复制图片}
 
-需要插入一个网络上的图片的时候，我们只需要复制这个图片的网址，然后通过 `org-download-yank` 就可以了，org-download会自动为我们下载这个图片。
+插入一个网络上的图片的时候，我们只需要复制这个图片的网址，然后通过 `org-download-yank` 就可以了，org-download会自动为我们下载这个图片。
 
-但是，其实我们一般不用这么复杂，直接拷贝网络上的图片，然后通过 `org-download-clipboard` 来进行粘贴就可以了。
+但是，其实我们一般不用这么复杂，直接拷贝网络上的图片，然后通过 `org-download-clipboard (SPC m a p)` 来进行粘贴就可以了。
 
-{{< figure src="/ox-hugo/_20210103_122331screenshot.png" width="80%" >}}
+{{< figure src="/ox-hugo/_20210103_122331screenshot.png" width="50%" >}}
 
 不过对于这种插入进来的图片orgmode好像不会显示图片，只会显示成附件，所以我们需要执行一次 `org-display-inline-images` 来进行显示。
 
@@ -57,9 +59,11 @@ from = "orgmode"
 
 ## 直接拖拽 {#直接拖拽}
 
-{{< figure src="/ox-hugo/_20210103_122352ikyq0erbl2o.jpg" width="80%" >}}
+{{< figure src="/ox-hugo/_20210103_122352ikyq0erbl2o.jpg" width="50%" >}}
 
 这个功能doom里面也已经为我们集成了，直接打开finder，把图片拖拽进emacs就可以了。
+
+不过这个还是不够方便，最好能直接copy然后在emacs里面粘贴就可以了，这样最方便。
 
 
 ## 更新历史 {#更新历史}
