@@ -13,6 +13,7 @@ rm -rf post/diaries
 grep -lrn "draft = true" * | xargs rm -rf
 cd -
 
+
 git add .
 git ci -m "update blog"
 git push
